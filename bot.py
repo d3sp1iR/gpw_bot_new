@@ -1,9 +1,11 @@
 import telebot
-import handlers 
+from config import BOT_TOKEN
+import handlers
 
-bot = telebot.TeleBot("8758647298:AAHGX_LckOWqY4pru08BsqEbwZGSaay6kyQ")
+
+bot = telebot.TeleBot(BOT_TOKEN)
 
 handlers.register(bot)
 
-print("Работает вроде")
+print("Bot started...")
 bot.infinity_polling()
